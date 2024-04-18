@@ -93,6 +93,8 @@
                                         Contáctanos
                                     </a>
                                 </li>
+                                {% if user.is_authenticated %}
+                                {% else %}
                                 <li class="nav-item">
                                     <a class="nav-link d-flex align-items-center me-2 text-dark font-weight-bold"
                                         href="{% url 'inicio_s' %}">
@@ -105,6 +107,7 @@
                                         Iniciar sesion
                                     </a>
                                 </li>
+                                {% endif %}
                             </ul>
 
                         </div>
