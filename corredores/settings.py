@@ -78,16 +78,13 @@ WSGI_APPLICATION = 'corredores.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/xe',
-        'USER' : 'corredores01',
-        'PASSWORD' : 'corredores01',
-        'TEST' : {
-            'USER' : 'default_test',
-            'TBLSPACE' : 'default_test_tbls',
-            'TBLSPACE_TMP' : 'default_test_tbls_tmp',
-
-        }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'railway',
+        'USER' : 'root',
+        'PASSWORD' : 'yneaAlSWedFjdnXySmquxEbXOnnWwTkF',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT' : '35362',
+        
     }
 }
 
