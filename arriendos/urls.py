@@ -25,6 +25,14 @@ urlpatterns = [
     path('view_arrend', view_arrend, name="view_arrend"),
     path('addpropiedad',addpropiedad, name="addpropiedad"),
     path('addcontrato', addcontrato, name="addcontrato"),
+    path('addpropietario', addpropietario, name="addpropietario"),
+    path('addarrendatario', addarrendatario, name="addarrendatario"),
+    path('detallepropiedad', detallepropiedad, name="detallepropiedad"),
+    path('detallearrendatario', detallearrendatario, name="detallearrendatario"),
+    path('detallepropietario', detallepropietario, name="detallepropietario"),
+    path('pagar', pagar, name="pagar"),
+    path('perfilu', perfilu, name="perfilu"),
+    path('contactanos',contactanos, name="contactanos"),
     
     
 ]

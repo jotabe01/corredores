@@ -71,6 +71,84 @@ def addpropiedad(request):
         # El usuario no tiene permiso para ver este perfil
         return render(request, 'arriendos/index.html')
     
+
+@corredor_required
+@login_required(login_url='/inicio_s')
+def addpropietario(request):
+    usuario = usuario = get_object_or_404(USUARIO, user=request.user)
+    # Verifica si el usuario autenticado es dueño del perfil
+    if usuario.user == request.user:
+        # El usuario tiene acceso al perfil
+        return render(request, 'arriendos/addpropietario.html', {'usuario': usuario})
+    else:
+        # El usuario no tiene permiso para ver este perfil
+        return render(request, 'arriendos/index.html')
+    
+@corredor_required
+@login_required(login_url='/inicio_s')
+def addarrendatario(request):
+    usuario = usuario = get_object_or_404(USUARIO, user=request.user)
+    # Verifica si el usuario autenticado es dueño del perfil
+    if usuario.user == request.user:
+        # El usuario tiene acceso al perfil
+        return render(request, 'arriendos/addarrendatario.html', {'usuario': usuario})
+    else:
+        # El usuario no tiene permiso para ver este perfil
+        return render(request, 'arriendos/index.html')
+    
+
+@corredor_required
+@login_required(login_url='/inicio_s')
+def detallepropiedad(request):
+    usuario = usuario = get_object_or_404(USUARIO, user=request.user)
+    # Verifica si el usuario autenticado es dueño del perfil
+    if usuario.user == request.user:
+        # El usuario tiene acceso al perfil
+        return render(request, 'arriendos/detallepropiedad.html', {'usuario': usuario})
+    else:
+        # El usuario no tiene permiso para ver este perfil
+        return render(request, 'arriendos/index.html')
+    
+
+@corredor_required
+@login_required(login_url='/inicio_s')
+def detallearrendatario(request):
+    usuario = usuario = get_object_or_404(USUARIO, user=request.user)
+    # Verifica si el usuario autenticado es dueño del perfil
+    if usuario.user == request.user:
+        # El usuario tiene acceso al perfil
+        return render(request, 'arriendos/detallearrendatario.html', {'usuario': usuario})
+    else:
+        # El usuario no tiene permiso para ver este perfil
+        return render(request, 'arriendos/index.html')
+    
+
+@corredor_required
+@login_required(login_url='/inicio_s')
+def detallepropietario(request):
+    usuario = usuario = get_object_or_404(USUARIO, user=request.user)
+    # Verifica si el usuario autenticado es dueño del perfil
+    if usuario.user == request.user:
+        # El usuario tiene acceso al perfil
+        return render(request, 'arriendos/detallepropietario.html', {'usuario': usuario})
+    else:
+        # El usuario no tiene permiso para ver este perfil
+        return render(request, 'arriendos/index.html')
+    
+
+@corredor_required
+@login_required(login_url='/inicio_s')
+def pagar(request):
+    usuario = usuario = get_object_or_404(USUARIO, user=request.user)
+    # Verifica si el usuario autenticado es dueño del perfil
+    if usuario.user == request.user:
+        # El usuario tiene acceso al perfil
+        return render(request, 'arriendos/pagar.html', {'usuario': usuario})
+    else:
+        # El usuario no tiene permiso para ver este perfil
+        return render(request, 'arriendos/index.html')
+    
+
 @corredor_required    
 @login_required(login_url='/inicio_s')
 def propietarios(request):
@@ -118,7 +196,39 @@ def finanzas(request):
     else:
         # El usuario no tiene permiso para ver este perfil
         return render(request, 'arriendos/index.html')
-    
+
+@corredor_required    
+@login_required(login_url='/inicio_s')
+def perfilu(request):
+    tipos_usuarios = TIPO_USUSARIO.objects.all()
+    contexto = {
+        'tipos_usuarios': tipos_usuarios
+    }
+    usuario = usuario = get_object_or_404(USUARIO, user=request.user)
+    # Verifica si el usuario autenticado es dueño del perfil
+    if usuario.user == request.user:
+        # El usuario tiene acceso al perfil
+        return render(request, 'arriendos/perfilu.html', {'usuario': usuario})
+    else:
+        # El usuario no tiene permiso para ver este perfil
+        return render(request, 'arriendos/index.html')
+
+
+@corredor_required    
+@login_required(login_url='/inicio_s')
+def contactanos(request):
+    tipos_usuarios = TIPO_USUSARIO.objects.all()
+    contexto = {
+        'tipos_usuarios': tipos_usuarios
+    }
+    usuario = usuario = get_object_or_404(USUARIO, user=request.user)
+    # Verifica si el usuario autenticado es dueño del perfil
+    if usuario.user == request.user:
+        # El usuario tiene acceso al perfil
+        return render(request, 'arriendos/contactanos.html', {'usuario': usuario})
+    else:
+        # El usuario no tiene permiso para ver este perfil
+        return render(request, 'arriendos/index.html')
     
 @corredor_required     
 @login_required(login_url='/inicio_s')

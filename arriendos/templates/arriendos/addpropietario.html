@@ -187,7 +187,7 @@
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">{{usuario.id_tipo_u.tipo_u}}</a></li>
             <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Propiedades / Agregar Propiedad </li>
           </ol>
-          <h6 class="font-weight-bold mb-0">Administración de Propiedades</h6>
+          <h6 class="font-weight-bold mb-0">Administración de Propietarios</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -316,7 +316,7 @@
     <div class="col-md-10 d-flex flex-column mx-auto" style="margin-top: -30px;">
         <div class="card card-plain mt-8">
           <div class="card-header pb-0 text-left bg-transparent">
-            <h3 class="font-weight-black text-dark display-6">Registrar Propiedad</h3>
+            <h3 class="font-weight-black text-dark display-6">Registrar Propietarios</h3>
             <p class="mb-0">Verifica que los datos sean los correctos.</p>
           </div>
           <div class="card-body">
@@ -325,53 +325,32 @@
             {% csrf_token %}
             <div class="row">
               <div class="mb-3 col-md-6"> 
-                <label>Nombre Propiedad</label>
+                <label>Nombre</label>
                 <input type="text" name="nombre" class="form-control" placeholder="Ingresa el nombre" aria-label="Nombre" aria-describedby="nombre-addon">
               </div>
               <div class="mb-3 col-md-6">
-                <label>Numero de Habitaciones</label>
+                <label>Apellidos</label>
                 <input type="text" name="apellidos" class="form-control" placeholder="Ingresa los apellidos" aria-label="Apellidos" aria-describedby="apellidos-addon">
               </div>
             </div>
             <div class="row">
             <div class="mb-3 col-md-6">
-                <label>Numero de Baños</label>
+                <label>Rut</label>
                 <input type="text" name="rut" class="form-control" placeholder="Ingresa el rut sin puntos ni guión" aria-label="Rut" aria-describedby="rut-addon">
               </div>
               <div class="mb-3  col-md-6">
-                <label>Precio Arriendo</label>
+                <label>Fecha de Nacimiento</label>
                 <input type="date" name="f_nacimiento" class="form-control" placeholder="Ingresa la fecha de nacimiento" aria-label="Fecha" aria-describedby="fecha-addon">
               </div>
             </div>
             <div class="row">
             <div class="mb-3 col-md-6">
-                <label>Estado</label>
+                <label>Correo</label>
                 <input type="email" name="correo" class="form-control" placeholder="Ingresa el correo electronico" aria-label="Email" aria-describedby="email-addon">
               </div>
               <div class="mb-3 col-md-6">
-                <label>Metros Cuadrados</label>
+                <label>Numero de Telefono</label>
                 <input type="text" name="numero_tel" class="form-control" placeholder="Ingresa el número télefonico" aria-label="Telefono" aria-describedby="telefono-addon">
-              </div>
-            </div>
-            <div class="row">
-            <div class="mb-3 col-md-6">
-              <label>Metros Cuadrados (Terreno)</label>
-                <input type="password" name="Contraseña" class="form-control" placeholder="Crea una contraseña" aria-label="Password" aria-describedby="password-addon">
-              </div>
-              <div class="mb-3 col-md-6">
-                <label>N° de Rol</label>
-                <input type="password" name="Contraseña" class="form-control" placeholder="Crea una contraseña" aria-label="Password" aria-describedby="password-addon">
-              </div>
-            </div>
-            <div class="row">
-            <div class="mb-3 col-md-6">
-                <label>Año de la Construcción</label>
-                <input type="password" name="Contraseña" class="form-control" placeholder="Crea una contraseña" aria-label="Password" aria-describedby="password-addon">
-              </div>
-              <div class="mb-3  col-md-6">
-                <label>Amoblada</label>
-                <input type="password" name="Contraseña1" class="form-control" placeholder="Repite la contraseña anterior" aria-label="Password" aria-describedby="password-addon">
-
               </div>
             </div>
               <div class="text-center col-md-5"  style="margin-left: auto; margin-right: auto;">
@@ -387,6 +366,8 @@
         </div>
       </div>
     </div>
+        
+      
       <footer class="footer pt-3  ">
         <div class="container-fluid">
           <div class="row align-items-center justify-content-lg-between">

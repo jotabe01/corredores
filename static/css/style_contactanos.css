@@ -1,0 +1,53 @@
+.card-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: #f9f9f9; /* Color de fondo ligero para el cuadro */
+    margin:0px; /* Espacio superior e inferior */
+    margin-bottom: 2px;
+}
+
+.texto-informativo{
+    margin: 2%;
+}
+
+/*de aqui para abajo copie*/
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(https://images.pexels.com/photos/233698/pexels-photo-233698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* opacidad al 50 porciento*/
+    z-index: -1;
+
+}
+
+body::-webkit-scrollbar{
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: rgb(108, 108, 108);
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background:  rgb(108, 108, 108);
+}
+
+.navbar{
+    background-color: black;
+}

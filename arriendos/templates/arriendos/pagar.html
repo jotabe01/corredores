@@ -1,0 +1,67 @@
+{% extends "arriendos/base.html" %}
+{% load static %}
+
+{% block contenido %}
+<div class="col-md-10 d-flex flex-column mx-auto" style="margin-top: -30px;">
+  <div class="card card-plain mt-8">
+    <div class="card-header pb-0 text-left bg-transparent">
+      <h3 class="font-weight-black text-dark display-6">Pago de Servicios</h3>
+    </div>
+    <div class="card-body">
+      <form action="{% url 'registrar' %}" method="POST" enctype="multipart/form-data" name="formulario_registro"
+        id="formulario_registro">
+        {% csrf_token %}
+        <div class="row">
+          <div class="mb-3">
+            <label for="imagen_u">Pago Arriendo</label>
+            <input type="file" id="imagen_u" class="form-control" name="imagen_us">
+          </div>
+          <div class="mb-3">
+            <label for="imagen_u">Pago Luz</label>
+            <input type="file" id="imagen_u" class="form-control" name="imagen_us">
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3">
+            <label for="imagen_u">Pago Agua</label>
+            <input type="file" id="imagen_u" class="form-control" name="imagen_us">
+          </div>
+          <div class="mb-3">
+            <label for="imagen_u">Pago Gas</label>
+            <input type="file" id="imagen_u" class="form-control" name="imagen_us">
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3">
+            <label for="imagen_u">Pago Telefono</label>
+            <input type="file" id="imagen_u" class="form-control" name="imagen_us">
+          </div>
+          <div class="mb-3">
+            <label for="imagen_u">Pago Internet</label>
+            <input type="file" id="imagen_u" class="form-control" name="imagen_us">
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3">
+            <label for="imagen_u">Pago Credito</label>
+            <input type="file" id="imagen_u" class="form-control" name="imagen_us">
+          </div>
+          <div class="mb-3">
+            <label for="imagen_u">Pago Gasto Común</label>
+            <input type="file" id="imagen_u" class="form-control" name="imagen_us">
+          </div>
+        </div>
+        <div class="text-center col-md-5" style="margin-left: auto; margin-right: auto;">
+          <button type="submit" class="btn btn-dark w-100 mt-4 mb-3">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <div class="card-footer text-center pt-0 px-lg-2 px-1">
+      <p class="mb-4 text-xs mx-auto">
+
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock contenido %}

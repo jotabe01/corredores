@@ -1,0 +1,160 @@
+{% extends "arriendos/base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static '/css/style_perfil.css '%}">
+{% endblock css %}
+
+{% block contenido %}
+<div class="row" style="margin: 0%;">
+    <div class="col-12">
+        <!--Carta de usuario con foto-->
+        <!-- debajo de este div tratar de pegar la otra card de perfil de usuario-->
+        <div class="perfil-usuario-body">
+            <div class="perfil-usuario-bio">
+                <div class="card-body">
+                    <section class="seccion-perfil-usuario">
+                        <div class="perfil-usuario-header">
+                            <div class="perfil-usuario-portada">
+                                <div class="perfil-usuario-avatar ">
+                                    <!-- ALTO Y ANCHO DE LA IMAGEN DE FOTO DE PERFIL-->
+                                    <img class="w-100 h-100 " src="{% static 'img/team-4.jpg' %}"
+                                        alt="Imagen Predeterminada">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="perfil-usuario-body">
+                            <!-- CARTA DE USUARIO -->
+                            <div class="perfil-usuario-bio" style="font-size: 0.8rem;">
+                                <!-- BOTON DE EDITAR -->
+                                <div class="editar">
+                                    <button type="button" class="btn btn-white btn-icon px-2 py-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 30 20" fill="currentColor">
+                                            <path
+                                                d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32L19.513 8.2z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- NOMBRE DEL USUARIO -->
+                                <h3 class="titulo " style="margin: 0.2rem 0; font-size: larger;">Perfil Usuario
+                                </h3>
+                                <h5 style="font-size: 1rem; color: gray;">
+                                    Jorge Ceylan</h5>
+                                <!-- NOMBRE DEL USUARIO -->
+                                <h4 style="padding: 5px 0; font-size: larger;">Tipo de Usuario</h4>
+                                <h5 style="font-size: 1rem; color: gray;">
+                                    Corredor</h5>
+                            </div>
+                            <!-- SECCION DATOS PERSONALES -->
+                            <div class="container py-3">
+                                <div class="row">
+                                    <div class="col-lg">
+                                        <div class="card mb-3 ">
+                                            <p class="mt-4 text-center "><strong>Datos Personales</strong></p>
+                                            <div class="card-header d-flex justify-content-end mb-1"></div>
+
+                                            <div class="card-body text-center">
+
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <p class="text-bold text-gray-900 dark:text-white">
+                                                            <strong>Nombre</strong>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <p class="text-muted mb-0">Jorge</p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <p class="text-bold text-gray-900 dark:text-white">
+                                                            <strong>Apellidos</strong>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <p class="text-muted mb-0">Ceylan F.</p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <p class="text-bold text-gray-900 dark:text-white">
+                                                            <strong>Run</strong>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <p class="text-muted mb-0">19.868.456-1</p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <p class="text-bold text-gray-900 dark:text-white">
+                                                            <strong>e-mail</strong>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <p class="text-muted mb-0">corredorCeylan@ArriendosWeb.cl
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <p class="text-bold text-gray-900 dark:text-white">
+                                                            <strong>e-mail Personal</strong>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <p class="text-muted mb-0">Ceylanpersonal@gmail.com</p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <p class="text-bold text-gray-900 dark:text-white">
+                                                            <strong>Fecha Nacimiento</strong>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <p class="text-muted mb-0">14/02/1987</p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <p class="text-bold text-gray-900 dark:text-white">
+                                                            <strong>Telefono</strong>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <p class="text-muted mb-0">+56955549588</p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <p class="text-bold text-gray-900 dark:text-white">
+                                                            <strong>Cantidad de Propiedades</strong>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <p class="text-muted mb-0">10</p>
+                                                        <p class="text-dark disabled">Activas</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock contenido %}

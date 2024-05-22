@@ -1,0 +1,29 @@
+
+/*Para la foto de sign-up y que la imagen esté mas opaca*/
+
+.imagenurl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* opacidad al 50 porciento*/
+    z-index: -1; 
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(108, 108, 108);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgb(108, 108, 108);
+}
+
+.navbar {
+    background-color: black;
+}
