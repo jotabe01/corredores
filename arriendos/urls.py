@@ -33,6 +33,8 @@ urlpatterns = [
     path('pagar', pagar, name="pagar"),
     path('perfilu', perfilu, name="perfilu"),
     path('contactanos',contactanos, name="contactanos"),
+    path('detallepago',detallepago, name="detallepago"),
+    path('detallepagocorredor',detallepagocorredor, name="detallepagocorredor"),
     
     
 ]

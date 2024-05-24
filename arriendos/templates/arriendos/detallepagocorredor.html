@@ -1,0 +1,44 @@
+{% extends "arriendos/base.html" %}
+{% load static %}
+
+{% block contenido %}
+    <div class="col-md-10 d-flex flex-column mx-auto" style="margin-top: -30px;">
+      <div class="card card-plain mt-8">
+        <div class="card-header pb-0 text-left bg-transparent">
+          <h3 class="font-weight-black text-dark display-6">Detalle de Pago</h3>
+        </div>
+        <div class="card-body">
+          <form action="{% url 'registrar' %}" method="POST" enctype="multipart/form-data" name="formulario_registro"
+            id="formulario_registro">
+            {% csrf_token %}
+            <div class="row">
+              <div class="mb-3 col-md-6">
+                <label>Escribir Monto</label>
+                <input type="text" name="apellidos" class="form-control" placeholder="Ingresa Monto"
+                aria-label="Apellidos" aria-describedby="apellidos-addon">
+              </div>
+              <div class="mb-3 col-md-6">
+                <label>Vencimiento</label>
+                <div class="mb-3">
+                  <input type="date" name="f_nacimiento" class="form-control" placeholder="Ingresa la fecha de nacimiento" aria-label="Fecha" aria-describedby="fecha-addon">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col-md-6">
+                <label>Sube tu comprobante</label>
+                <input type="file" name="apellidos" class="form-control" placeholder="Ingresa los apellidos"
+                  aria-label="Apellidos" aria-describedby="apellidos-addon">
+              </div>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-dark mt-4 mb-3">Enviar</button>
+            </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    {% endblock contenido %}

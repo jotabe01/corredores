@@ -212,6 +212,40 @@ def perfilu(request):
     else:
         # El usuario no tiene permiso para ver este perfil
         return render(request, 'arriendos/index.html')
+    
+
+@corredor_required    
+@login_required(login_url='/inicio_s')
+def detallepago(request):
+    tipos_usuarios = TIPO_USUSARIO.objects.all()
+    contexto = {
+        'tipos_usuarios': tipos_usuarios
+    }
+    usuario = usuario = get_object_or_404(USUARIO, user=request.user)
+    # Verifica si el usuario autenticado es dueño del perfil
+    if usuario.user == request.user:
+        # El usuario tiene acceso al perfil
+        return render(request, 'arriendos/detallepago.html', {'usuario': usuario})
+    else:
+        # El usuario no tiene permiso para ver este perfil
+        return render(request, 'arriendos/index.html')
+    
+
+@corredor_required    
+@login_required(login_url='/inicio_s')
+def detallepagocorredor(request):
+    tipos_usuarios = TIPO_USUSARIO.objects.all()
+    contexto = {
+        'tipos_usuarios': tipos_usuarios
+    }
+    usuario = usuario = get_object_or_404(USUARIO, user=request.user)
+    # Verifica si el usuario autenticado es dueño del perfil
+    if usuario.user == request.user:
+        # El usuario tiene acceso al perfil
+        return render(request, 'arriendos/detallepagocorredor.html', {'usuario': usuario})
+    else:
+        # El usuario no tiene permiso para ver este perfil
+        return render(request, 'arriendos/index.html')
 
 
 @corredor_required    

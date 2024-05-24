@@ -6,6 +6,7 @@
       <div class="card card-plain mt-8">
         <div class="card-header pb-0 text-left bg-transparent">
           <h3 class="font-weight-black text-dark display-6">Detalle Propiedad</h3>
+          <p class="mb-0">Si deseea podrá editar los campos necesarios.</p>
         </div>
         <div class="card-body">
           <form action="{% url 'registrar' %}" method="POST" enctype="multipart/form-data" name="formulario_registro"
@@ -69,16 +70,13 @@
                 <label>Amoblada</label>
                 <input type="password" name="Contraseña1" class="form-control"
                   placeholder="Repite la contraseña anterior" aria-label="Password" aria-describedby="password-addon">
-
               </div>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-dark mt-4 mb-3">Editar</button>
             </div>
         </div>
         </form>
-      </div>
-      <div class="card-footer text-center pt-0 px-lg-2 px-1">
-        <p class="mb-4 text-xs mx-auto">
-
-        </p>
       </div>
     </div>
     </div>
