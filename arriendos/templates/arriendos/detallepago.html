@@ -1,0 +1,60 @@
+{% extends "arriendos/base.html" %}
+{% load static %}
+
+{% block contenido %}
+    <div class="col-md-10 d-flex flex-column mx-auto" style="margin-top: -30px;">
+      <div class="card card-plain mt-8">
+        <div class="card-header pb-0 text-left bg-transparent">
+          <h3 class="font-weight-black text-dark display-6">Subir Comprobante de Pago</h3>
+        </div>
+        <div class="card-body">
+          <form action="{% url 'registrar' %}" method="POST" enctype="multipart/form-data" name="formulario_registro"
+            id="formulario_registro">
+            {% csrf_token %}
+            <div class="row">
+              <div class="mb-3 col-md-6">
+                <label>Boleta de Servicio </label>
+                <p class="text-sm">boletaservicioluz.pdf</p>
+                <button type="button" class="btn btn-sm btn-dark btn-icon d-flex align-items-center mb-0">
+                  <span class="btn-inner--icon">
+                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke-width="1.5" stroke="currentColor" class="d-block me-2">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </span>
+                  <span class="btn-inner--text">Descargar</span>
+                </button>
+              </div>
+              <div class="mb-3 col-md-6">
+                <label>Monto a Pagar</label>
+                <p class="text-sm">$10.000</p>
+              </div>
+              <div class="mb-3 col-md-6">
+                <label>Vencimiento</label>
+                <p class="text-sm">23/05/2024</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3 col-md-6">
+                <label>Escribir Monto</label>
+                <input type="text" name="apellidos" class="form-control" placeholder="Ingresa Monto"
+                aria-label="Apellidos" aria-describedby="apellidos-addon">
+              </div>
+              <div class="mb-3 col-md-6">
+                <label>Sube tu comprobante</label>
+                <input type="file" name="apellidos" class="form-control" placeholder="Ingresa los apellidos"
+                  aria-label="Apellidos" aria-describedby="apellidos-addon">
+              </div>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-dark mt-4 mb-3">Enviar</button>
+            </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    {% endblock contenido %}

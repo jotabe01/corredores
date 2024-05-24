@@ -6,6 +6,7 @@
   <div class="card card-plain mt-8">
     <div class="card-header pb-0 text-left bg-transparent">
       <h3 class="font-weight-black text-dark display-6">Detalle Arrendatario</h3>
+      <p class="mb-0">Si deseea podrá editar los campos necesarios.</p>
     </div>
     <div class="card-body">
       <form action="{% url 'registrar' %}" method="POST" enctype="multipart/form-data" name="formulario_registro"
@@ -46,13 +47,11 @@
             <input type="text" name="numero_tel" class="form-control" placeholder="Ingresa el número télefonico"
               aria-label="Telefono" aria-describedby="telefono-addon">
           </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-dark mt-4 mb-3">Editar</button>
+          </div>
         </div>
       </form>
-    </div>
-    <div class="card-footer text-center pt-0 px-lg-2 px-1">
-      <p class="mb-4 text-xs mx-auto">
-
-      </p>
     </div>
   </div>
 </div>
